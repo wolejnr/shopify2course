@@ -97,8 +97,8 @@
   },
   "order": [
     "image_banner",
-    "rich_text",
     "featured_products",
+    "rich_text",
     "collage",
     "video",
     "multi_column"
