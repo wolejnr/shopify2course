@@ -12,20 +12,6 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "50% OFF for Dec 25th",
-              "background_color": "#000000",
-              "announcement_text_color": "#ffffff",
-              "link": "shopify:\/\/collections\/converse"
-            }
-          }
-        },
-        "block_order": [
-          "announcement-bar-0"
-        ],
         "settings": {
         }
       },
