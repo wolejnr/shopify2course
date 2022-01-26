@@ -76,6 +76,38 @@
         "sm_col": "col-sm-2"
       }
     },
+    "1643174519aed95022": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "50vh",
+        "background1": "#000000",
+        "opacity1": 0.5,
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background2": "#000000",
+        "opacity2": 0.5,
+        "button_label2": "Button label",
+        "button_link2": ""
+      }
+    },
+    "1643174527a3d46689": {
+      "type": "collection-products-1",
+      "settings": {
+        "collection": "",
+        "total_products": 8,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#EDEFF5",
+        "opacity": 1,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -91,26 +123,13 @@
         "show_vendor": false,
         "show_rating": false
       }
-    },
-    "1643174519aed95022": {
-      "type": "hero-two",
-      "settings": {
-        "hero_height": "100vh",
-        "background1": "#000000",
-        "opacity1": 0.5,
-        "button_label1": "Button label",
-        "button_link1": "",
-        "background2": "#000000",
-        "opacity2": 0.5,
-        "button_label2": "Button label",
-        "button_link2": ""
-      }
     }
   },
   "order": [
     "164317446401519ed4",
     "1643174522bcc1bd58",
-    "featured_products",
-    "1643174519aed95022"
+    "1643174519aed95022",
+    "1643174527a3d46689",
+    "featured_products"
   ]
 }
