@@ -98,12 +98,12 @@
         "background1": "#000000",
         "opacity1": 0.5,
         "button_label1": "Men",
-        "button_link1": "",
+        "button_link1": "shopify:\/\/collections\/men",
         "image2": "shopify:\/\/shop_images\/model-on-steps-surrounded-by-plants.jpg",
         "background2": "#000000",
         "opacity2": 0.5,
         "button_label2": "Women",
-        "button_link2": ""
+        "button_link2": "shopify:\/\/collections\/women"
       }
     }
   },
