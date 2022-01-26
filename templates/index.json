@@ -123,6 +123,20 @@
         "show_vendor": false,
         "show_rating": false
       }
+    },
+    "164317474110c6defa": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "50vh",
+        "background1": "#000000",
+        "opacity1": 0.5,
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background2": "#000000",
+        "opacity2": 0.5,
+        "button_label2": "Button label",
+        "button_link2": ""
+      }
     }
   },
   "order": [
@@ -130,6 +144,7 @@
     "1643174522bcc1bd58",
     "1643174519aed95022",
     "1643174527a3d46689",
-    "featured_products"
+    "featured_products",
+    "164317474110c6defa"
   ]
 }
