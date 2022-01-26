@@ -31,9 +31,10 @@
       ],
       "settings": {
         "hero_height": "100vh",
+        "image": "shopify:\/\/shop_images\/thick-lush-green-forest.jpg",
         "background": "#000000",
         "opacity": 0.5,
-        "info_alignment": "right"
+        "info_alignment": "center"
       }
     },
     "1643174522bcc1bd58": {
