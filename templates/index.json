@@ -137,6 +137,60 @@
         "button_label2": "Button label",
         "button_link2": ""
       }
+    },
+    "1643174745465e1a9b": {
+      "type": "collection-products-1",
+      "settings": {
+        "collection": "",
+        "total_products": 8,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#EDEFF5",
+        "opacity": 1,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
+    },
+    "164317481622898713": {
+      "type": "hero-one",
+      "blocks": {
+        "164317481672fe7bae-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Title",
+            "title_size": "md"
+          }
+        },
+        "164317481672fe7bae-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Example message I'm baby listicle heirloom chia echo park, beard pop-up four loko direct trade. Cred flexitarian hammock chillwave squid pinterest offal."
+          }
+        },
+        "164317481672fe7bae-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "164317481672fe7bae-0",
+        "164317481672fe7bae-1",
+        "164317481672fe7bae-2"
+      ],
+      "settings": {
+        "hero_height": "50vh",
+        "background": "#000000",
+        "opacity": 0.5,
+        "info_alignment": "right"
+      }
     }
   },
   "order": [
@@ -145,6 +199,8 @@
     "1643174519aed95022",
     "1643174527a3d46689",
     "featured_products",
-    "164317474110c6defa"
+    "164317474110c6defa",
+    "1643174745465e1a9b",
+    "164317481622898713"
   ]
 }
