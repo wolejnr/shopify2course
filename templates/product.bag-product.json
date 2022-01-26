@@ -29,27 +29,34 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
+            "picker_type": "button"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "show_dynamic_checkout": true
           }
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
+            "share_label": "Share"
           }
         }
       },
@@ -65,16 +72,44 @@
         "share"
       ],
       "settings": {
+        "enable_sticky_info": true,
+        "hide_variants": false,
+        "enable_video_looping": false
       }
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "16431695294f3f0beb": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "75vh",
+        "image1": "shopify:\/\/shop_images\/man-reaches-inside-his-jacket.jpg",
+        "background1": "#000000",
+        "opacity1": 0.5,
+        "button_label1": "Men",
+        "button_link1": "",
+        "image2": "shopify:\/\/shop_images\/model-on-steps-surrounded-by-plants.jpg",
+        "background2": "#000000",
+        "opacity2": 0.5,
+        "button_label2": "Women",
+        "button_link2": ""
       }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "16431695294f3f0beb"
   ]
 }
