@@ -12,27 +12,17 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "50% OFF for Dec 25th",
-              "link": "shopify:\/\/collections\/converse"
-            }
-          }
-        },
-        "block_order": [
-          "announcement-bar-0"
-        ],
         "settings": {
         }
       },
       "header": {
         "type": "header",
         "settings": {
+          "header_type": "header1",
           "color_scheme": "background-1",
           "logo_width": 100,
-          "menu": "main-menu"
+          "menu": "main-menu",
+          "menu_two": "main-menu"
         }
       },
       "footer": {
@@ -90,7 +80,6 @@
             "announcement-bar-0": {
               "type": "announcement",
               "settings": {
-                "color_scheme": "background-1"
               }
             }
           },
