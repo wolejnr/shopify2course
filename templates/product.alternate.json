@@ -51,9 +51,13 @@
     },
     "product-recommendations": {
       "type": "product-recommendations"
+    },
+    "hero-two": {
+      "type": "hero-two"
     }
   },
   "order": [
+    "hero-two",
     "main",
     "product-recommendations"
   ]

@@ -1,106 +1,207 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "settings": {
-        "desktop_text_box_position": "flex-end"
-      },
+    "164317446401519ed4": {
+      "type": "hero-one",
       "blocks": {
-        "heading": {
+        "1643174464a7313380-0": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand"
+            "title": "Title",
+            "title_size": "md"
           }
         },
-        "button": {
-          "type": "buttons",
+        "1643174464a7313380-1": {
+          "type": "paragraph",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_label_2": ""
+            "paragraph": "Example message I'm baby listicle heirloom chia echo park, beard pop-up four loko direct trade. Cred flexitarian hammock chillwave squid pinterest offal."
+          }
+        },
+        "1643174464a7313380-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
-      ]
+        "1643174464a7313380-0",
+        "1643174464a7313380-1",
+        "1643174464a7313380-2"
+      ],
+      "settings": {
+        "hero_height": "100vh",
+        "image": "shopify:\/\/shop_images\/thick-lush-green-forest.jpg",
+        "background": "#000000",
+        "opacity": 0.5,
+        "info_alignment": "center"
+      }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "1643174522bcc1bd58": {
+      "type": "collection-group",
       "blocks": {
-        "heading": {
-          "type": "heading"
+        "16431745229e2a54fc-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
         },
-        "text": {
-          "type": "text"
+        "16431745229e2a54fc-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
         },
-        "button": {
-          "type": "button"
+        "16431745229e2a54fc-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
-      ]
+        "16431745229e2a54fc-0",
+        "16431745229e2a54fc-1",
+        "16431745229e2a54fc-2"
+      ],
+      "settings": {
+        "container_shape": "square",
+        "image_fit": "contain",
+        "background": "#ffffff",
+        "opacity": 1,
+        "show_title": true,
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-4",
+        "sm_col": "col-sm-2"
+      }
+    },
+    "1643174519aed95022": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "50vh",
+        "background1": "#000000",
+        "opacity1": 0.5,
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background2": "#000000",
+        "opacity2": 0.5,
+        "button_label2": "Button label",
+        "button_link2": ""
+      }
+    },
+    "1643174527a3d46689": {
+      "type": "collection-products-1",
+      "settings": {
+        "collection": "",
+        "total_products": 8,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#EDEFF5",
+        "opacity": 1,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
     },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
         "title": "Featured products",
         "collection": "all",
-        "image_ratio": "square"
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
       }
     },
-    "collage": {
-      "type": "collage",
+    "164317474110c6defa": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "50vh",
+        "background1": "#000000",
+        "opacity1": 0.5,
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background2": "#000000",
+        "opacity2": 0.5,
+        "button_label2": "Button label",
+        "button_link2": ""
+      }
+    },
+    "1643174745465e1a9b": {
+      "type": "collection-products-1",
+      "settings": {
+        "collection": "",
+        "total_products": 8,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#EDEFF5",
+        "opacity": 1,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
+    },
+    "164317481622898713": {
+      "type": "hero-one",
       "blocks": {
-        "video": {
-          "type": "video"
+        "164317481672fe7bae-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Title",
+            "title_size": "md"
+          }
         },
-        "product": {
-          "type": "product"
+        "164317481672fe7bae-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Example message I'm baby listicle heirloom chia echo park, beard pop-up four loko direct trade. Cred flexitarian hammock chillwave squid pinterest offal."
+          }
         },
-        "collection": {
-          "type": "collection"
+        "164317481672fe7bae-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "video",
-        "product",
-        "collection"
-      ]
-    },
-    "video": {
-      "type": "video"
-    },
-    "multi_column": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column"
-        },
-        "column2": {
-          "type": "column"
-        },
-        "column3": {
-          "type": "column"
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ]
+        "164317481672fe7bae-0",
+        "164317481672fe7bae-1",
+        "164317481672fe7bae-2"
+      ],
+      "settings": {
+        "hero_height": "50vh",
+        "background": "#000000",
+        "opacity": 0.5,
+        "info_alignment": "center"
+      }
     }
   },
   "order": [
-    "image_banner",
+    "164317446401519ed4",
+    "1643174522bcc1bd58",
+    "1643174519aed95022",
+    "1643174527a3d46689",
     "featured_products",
-    "rich_text",
-    "collage",
-    "video",
-    "multi_column"
+    "164317474110c6defa",
+    "1643174745465e1a9b",
+    "164317481622898713"
   ]
 }
