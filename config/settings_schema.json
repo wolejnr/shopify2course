@@ -8,8 +8,40 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Header Style",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header Background"
+      },
+      {
+        "type": "checkbox",
+        "id": "nav_background",
+        "label": "Transparent",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "header_sticky",
+        "label": "Stick Header To The Top",
+        "default": false
+      }            
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
+      {
+        "type": "header",
+        "content": "Global Styles"
+      },
+      {
+        "type": "color",
+        "id": "body_bg",
+        "default": "#F7F9FD",
+        "label": "Body Background",
+        "info": "This is the background color for the whole site"
+      },
       {
         "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"

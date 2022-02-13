@@ -114,7 +114,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'styles.css' | asset_url | stylesheet_tag }}
+    {{ 'vendors.css' | asset_url | stylesheet_tag }}
+
+    <style>
+      :root {
+        --body-bg: {{ settings.body_bg }};
+        --announce-bar-default: #605e7d;
+      }
+      body {
+        background: var(--body-bg);
+      }
+      a:hover {
+        color: #e63b49;
+      }
+      .fixed-nav.transparent-nav .header {
+        background: transparent;
+      }
+      .fixed-nav.transparent-nav .header a {
+        color: #fff;
+      }
+      .fixed-nav.transparent-nav
+        .header
+        .header1__collection-link
+        .collection-link__sub-links
+        a,
+      .fixed-nav.transparent-nav
+        .header
+        .header2__collection-link
+        .collection-link__sub-links
+        a,
+      .fixed-nav.transparent-nav
+        .header
+        .header3__collection-link
+        .collection-link__sub-links
+        a {
+        color: #000;
+      }
+      .fixed-nav.transparent-nav
+        .header
+        .header1__collection-link
+        .collection-link__sub-links
+        a:hover,
+      .fixed-nav.transparent-nav
+        .header
+        .header2__collection-link
+        .collection-link__sub-links
+        a:hover,
+      .fixed-nav.transparent-nav
+        .header
+        .header3__collection-link
+        .collection-link__sub-links
+        a:hover {
+        color: #e63b49;
+      }
+      .fixed-nav .header {
+        position: fixed;
+        width: 100%;
+        z-index: 20;
+      }
+    
+    </style>
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -130,7 +189,7 @@
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
   </head>
 
-  <body class="fixed-nav transparent-nav">
+  <body class="{% if settings.header_sticky == true %}fixed-nav{% endif %} {% if settings.nav_background == true %}transparent-nav{% endif %}" style="background: var(--body-bg);">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -140,6 +199,7 @@
     <main>
       {{ content_for_layout }}
     </main>
+
 
     {% section 'footer' %}
 
@@ -171,6 +231,40 @@
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
       }
     </script>
+
+    <!-- <script>
+      console.log('loaded javascript from header');
+      // Get body element 
+      const bodyTag = document.getElementsByTagName('body')[0];
+      console.log(bodyTag);
+
+      const headerWrapper = document.getElementById('shopify-section-header');
+
+      // Check for class fixed-nav
+      if(bodyTag.classList.contains('fixed-nav') && bodyTag.classList.contains('transparent-nav')) {
+        // change styles of header wrapper
+        headerWrapper.style.position = 'fixed';
+        headerWrapper.style.top = 0;
+        headerWrapper.style.left = 0;
+        headerWrapper.style.width = '100%';
+        headerWrapper.style.zIndex = '7';
+
+        // remove class of transparent bg when scrolled
+        const onScroll = () => {
+          const scrollLocation = document.documentElement.scrollTop;
+          console.log(scrollLocation);
+
+          if(scrollLocation > 50) {
+            bodyTag.classList.remove('transparent-nav');
+          } else {
+            bodyTag.classList.add('transparent-nav');
+          }
+
+          window.addEventListener('scroll', onScroll);
+        }
+      }
+      // if class fixed-nav exists, remove transparent-nav class when you scroll 
+    </script> -->
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>

@@ -1,8 +1,41 @@
 
-{{ 'Hero1.css' | asset_url | stylesheet_tag }}
+<!-- Dev -->
+<script src="{{ 'vue.js' | asset_url }}"></script>
+<!-- Production -->
+<!-- <script src="{{ 'vue.min.js' | asset_url }}"></script> -->
 
-<div class="hero hero1 hero1__aligned-{{ section.settings.info_alignment }} hero1__{{ section.settings.hero_height }}">
-    {%- if section.settings.image != blank -%}
+
+<style>
+  .product-highlight {
+    background: black;
+    padding: 100px 0;
+    color: #fff;
+  }
+  .product-highlight__img {
+    width: 100%;
+    height: auto;
+  }
+  .product-highlight__info-container h2 {
+    font-size: 2rem;
+    color: #fff;
+  }
+  .product-highlight__paragraph {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #fff;
+  }
+  .product-highlight__button {
+    background: white;
+    border: none;
+    padding: 15px 40px;
+  }
+</style>
+
+<div class="product-highlight">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {%- if section.settings.image != blank -%}
           <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
               {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
               {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
@@ -16,43 +49,89 @@
             loading="lazy"
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
-            class="hero1__bg"
+            class="product-highlight__img"
           >
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
+      </div>
+      <div class="col-md-4">
+        <div class="product-highlight__info-container">
+          {%- for block in section.blocks -%}
+              {% case block.type %}
+                {%- when 'heading' -%}
+                  <h2 class="product-highlight__title product-highlight__title--{{- block.settings.title_size -}}">{{ block.settings.title | escape }}</h2>
+                  
+                {%- when 'paragraph' -%}
+                  <p class="product-highlight__paragraph">
+                      {{ block.settings.paragraph | escape }}
+                  </p>
+                  
+                {%- when 'button' -%}
+                  {%- if block.settings.button_label != blank -%}
+                      <button @click="addToCart" class="product-highlight__button">
+                        {% assign button_title = block.settings.button_label | escape %} 
+                        {% assign product_url = block.settings.button_link %} 
+                        ${ button_title }
+                      </button>
 
-    {% assign opacity = section.settings.opacity %}
-    <div class="hero1__content-container" style="background-color: {{ section.settings.background | color_modify: 'alpha', opacity}}">
-        <div class="hero1__info">
-
-            {%- for block in section.blocks -%}
-                {% case block.type %}
-                  {%- when 'heading' -%}
-                    <h1 class="hero1__title hero1__title--{{- block.settings.title_size -}}">{{ block.settings.title | escape }}</h1>
-                   
-                  {%- when 'paragraph' -%}
-                    <p class="hero1__paragraph">
-                        {{ block.settings.paragraph }}
-                    </p>
-                    
-                  {%- when 'button' -%}
-                    {%- if block.settings.button_label != blank -%}
-                        <a href="{{ block.settings.button_link }}" class="hero1__button" {{ block.shopify_attributes }}>{{ block.settings.button_label | escape }}</a>
-
-                    {%- endif -%}
-                {%- endcase -%}
-              {%- endfor -%}
+                  {%- endif -%}
+              {%- endcase -%}
+            {%- endfor -%}
         </div>
+      </div>
     </div>
-    <h1>I am the Hero section</h1>
+  </div>
 </div>
+
+<script>
+  const productHighlight = Vue.createApp({
+    delimiters: ['${','}'],
+    created() {
+      fetch('{{product_url}}.js')
+      .then(res => res.json())
+      .then((data) => {
+        this.product_id = data.variants[0].id
+        console.log(this.product_id)
+      })
+    },
+    methods: {
+      addToCart() {
+        console.log("clicked button to add to cart");
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'xmlhttprequest'
+          },
+          credentials: 'same-origin',
+          body: JSON.stringify({
+            'id': this.product_id,
+            'quantity': 1
+          })
+        }).then(function(response) {
+            return response.json()
+        }).then(function(json) {
+          console.log(json)
+        }).catch(function (err) {
+          console.error(err)
+        });
+      }
+    },
+    data() {
+      return {
+        button_title: "{{ button_title }}",
+        product_id: ''
+      }
+    }
+  }).mount('.product-highlight')
+</script>
 
 
 
 {% schema %}
 {
-  "name": "Hero One",
+  "name": "Product Highlight",
   "class": "spaced-section spaced-section--full-width",
   "settings": [
   {
@@ -194,7 +273,7 @@
   ],
   "presets": [
     {
-      "name": "Hero One",
+      "name": "Product Highlight",
       "blocks": [
         {
           "type": "heading"
